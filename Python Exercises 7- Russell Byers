@@ -1,0 +1,9 @@
+Python 3.2.2 (default, Sep  4 2011, 09:51:08) [MSC v.1500 32 bit (Intel)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>> color_list = ["Red", "Green", "White", "Black"]
+>>> def first_and_last(sample_list):
+	return sample_list[0] + " and " + sample_list[-1]
+
+>>> first_and_last(color_list)
+'Red and Black'
+>>> # This function works not only for color_list, but for any list because of how it is written. When asked to     print index 0 of a list(return sample_list[0]), Python will print the very first item in the list. This prints out  "Red" in this case. Given a negative index, Python will count from the end of the list, and as -0 is unreal, -1 will return the last item on the list, printing "Black" for this list. Adding " and " was my way of making the output     look prettier.

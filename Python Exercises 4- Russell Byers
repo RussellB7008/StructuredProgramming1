@@ -1,0 +1,9 @@
+Python 3.2.2 (default, Sep  4 2011, 09:51:08) [MSC v.1500 32 bit (Intel)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>> first_name = input("Input your first name here: ")
+Input your first name here: Russell
+>>> last_name = input("Input your last name here: ")
+Input your last name here: Byers
+>>> print(last_name,",", first_name)
+Byers , Russell
+>>> # This program accepts two inputs of your first name and then last name,    then it prints them in the opposite order with a comma to separate them.

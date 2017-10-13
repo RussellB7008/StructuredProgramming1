@@ -1,0 +1,8 @@
+Python 3.2.2 (default, Sep  4 2011, 09:51:08) [MSC v.1500 32 bit (Intel)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>> file_name = input("Input filename here:")
+Input filename here: abc.java
+>>> file_extension = file_name.split(".")
+>>> print("The file extension is " + repr(file_extension[-1]))
+The file extension is 'java'
+>>> # This program takes an input of a filename and splits it where it finds a ".", which in this case is between   "abc" and "java". It then uses repr() to print the value assigned to file_extension. At this point, file_extension  is already split into a list, so by typing [-1] it will print the string "java" as that is in the last index of the list it has created.

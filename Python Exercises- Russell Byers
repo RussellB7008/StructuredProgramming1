@@ -1,0 +1,13 @@
+Python 3.2.2 (default, Sep  4 2011, 09:51:08) [MSC v.1500 32 bit (Intel)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>> sample_string = "Twinkle, twinkle, little star," + "\n" + "\t" + "How I wonder what you are!" + "\n" + "
+SyntaxError: EOL while scanning string literal
+>>> sample_string = "Twinkle, twinkle, little star, \n \t How I wonder what you are! \n \t \t Up above the world so high, \n \t \t Like a diamond in the sky.\n Twinkle, twinkle, little star,\n \tHow I wonder what you are"
+>>> print(sample_string)
+Twinkle, twinkle, little star, 
+ 	 How I wonder what you are! 
+ 	 	 Up above the world so high, 
+ 	 	 Like a diamond in the sky.
+ Twinkle, twinkle, little star,
+ 	How I wonder what you are
+>>> # This string works because the \n creates a new line and the \t adds a tab in the string, so it splits up the individual lines and spaces them properly.

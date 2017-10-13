@@ -1,0 +1,6 @@
+Python 3.2.2 (default, Sep  4 2011, 09:51:08) [MSC v.1500 32 bit (Intel)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>> def alarm_clock(day, vacation):
+	weekend = "off" if vacation else "10:00"
+	weekday = "10:00" if vacation else "7:00"
+	return weekend if day in [0, 6] else weekday

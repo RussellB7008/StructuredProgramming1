@@ -1,0 +1,10 @@
+Python 3.2.2 (default, Sep  4 2011, 09:51:08) [MSC v.1500 32 bit (Intel)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>> values = input("Input some numbers separated by commas here:")
+Input some numbers separated by commas here: 2, 7, 5, 3, 8
+>>> list = values.split(",")
+>>> tuple = tuple(list)
+>>> print("List:",list,"\n", "Tuple:",tuple)
+List: [' 2', ' 7', ' 5', ' 3', ' 8'] 
+ Tuple: (' 2', ' 7', ' 5', ' 3', ' 8')
+>>> # This program accepts and input of numbers separated by commas under the variable "values". It then turns      "values" into a list under the variable "list". The tuple "tuple" is created by making "list" into a tuple. It then prints "list" and "tuple" in a string with the required format.

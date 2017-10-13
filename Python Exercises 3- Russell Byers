@@ -1,0 +1,10 @@
+Python 3.2.2 (default, Sep  4 2011, 09:51:08) [MSC v.1500 32 bit (Intel)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>> import math
+>>> def area_of_circle(radius):
+	"""In this function, I use the radius as an argument because the formula for the area of a circle is         pi * radius ** 2. I need to import math so I can have pi at the ready"""
+	return math.pi * radius**2
+
+>>> area_of_circle(7)
+153.93804002589985
+>>> 

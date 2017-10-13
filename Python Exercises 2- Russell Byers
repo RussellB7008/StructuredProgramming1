@@ -1,0 +1,17 @@
+Python 3.2.2 (default, Sep  4 2011, 09:51:08) [MSC v.1500 32 bit (Intel)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>> import datetime
+>>> datetime.now
+Traceback (most recent call last):
+  File "<pyshell#6>", line 1, in <module>
+    datetime.now
+AttributeError: 'module' object has no attribute 'now'
+>>> datetime.today()
+Traceback (most recent call last):
+  File "<pyshell#7>", line 1, in <module>
+    datetime.today()
+AttributeError: 'module' object has no attribute 'today'
+>>> import time
+>>> print(time.strftime("%I:%M:%S %d/%m/%y"))
+02:58:27 03/10/17
+>>> # This code works because the time.strftime prints out the date and time in the format given. The %x decides     if it is printing an hour, minute, second, day, month, or year, and I put it in that format.
