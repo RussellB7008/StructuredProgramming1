@@ -1,0 +1,66 @@
+Python 3.2.2 (default, Sep  4 2011, 09:51:08) [MSC v.1500 32 bit (Intel)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>> import tkinter as tk
+>>> import random
+>>> def computer_play():
+	options = ["Rock", "Paper", "Scissors"]
+	randomchoice = random.randint(0,2)
+	computer_choice.set(options[randomchoice])
+	return options[randomchoice]
+
+>>> def comparison(humanchoice, computerchoice):
+	if humanchoice == computerchoice:
+		return ("Draw")
+	elif humanchoice == "Rock" and computerchoice == "Paper":
+		return ("Computer wins")
+	elif humanchoice == "Paper" and computerchoice == "Scissors":
+		return ("Computer wins")
+	elif humanchoice == "Scissors" and computerchoice == "Rock":
+		return ("Computer wins")
+	else:
+		return ("Human wins")
+
+	
+>>> def play():
+	humanchoice = player_choice.get()
+	computerchoice = computer_play()
+	result = comparison(humanchoice, computerchoice)
+	if result == "Draw":
+		result_set.set("Its a draw")
+	elif result == "Computer wins":
+		result_set.set("The computer has defeated you!")
+	else:
+		result_set.set("You have prevailed against the computer!")
+
+		
+>>> window = tk.Tk()
+>>> window.title("Rock Paper Scissors: The Video Game")
+''
+>>> window.geometry("320x170+100+200")
+''
+>>> player_choice = tk.StringVar()
+>>> computer_choice = tk.StringVar()
+>>> result_set = tk.StringVar()
+>>> 
+>>> tk.Label(window, text="Player Plays:",font=("",15)).place(x=10,y=5)
+>>> 
+>>> tk.Radiobutton(window, text="Rock", variable=player_choice, value="Rock",font=("",12)).place(x=10,y=40)
+>>> 
+>>> tk.Radiobutton(window, text='Paper', variable=player_choice, value='Paper',font=("",12)).place(x=10,y=80)
+>>> 
+>>> tk.Radiobutton(window, text='Scissors', variable=player_choice, value='Scissors',font=("",12)).place(x=10,y=120)
+>>> 
+>>> tk.Label(window, text='Computer Plays:',font=("",15)).place(x=160,y=5)
+>>> 
+>>> tk.Radiobutton(window, text='Rock', variable=computer_choice, value='Rock',font=("",12)).place(x=170,y=40)
+>>> 
+>>> tk.Radiobutton(window, text='Paper', variable=computer_choice, value='Paper',font=("",12)).place(x=170,y=80)
+>>> 
+>>> tk.Radiobutton(window, text='Scissors', variable=computer_choice,
+            value='Scissors',font=("",12)).place(x=170,y=120)
+>>> 
+>>> tk.Button(window, text="Play", command=play,font=("",10)).place(x=100,y=60)
+>>> 
+>>> tk.Label(window, textvariable=result_set,font=("",10)).place(x=30,y=150)
+>>> 
+>>> window.mainloop()
